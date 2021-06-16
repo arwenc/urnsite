@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" type="text/css" href="menuHamburger.css"/>
+        <link rel="stylesheet" href="./flexboxes.css">
+        <link rel="stylesheet" href="./fun_stuff.css">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -27,7 +29,7 @@
                     <a href="http://uvaurn.org/the-committees/"><li>About Us</li></a>
                     <a href="opportunities.html"><li>Research-Related Opportunities</li></a>
                     <a href="urntalks.html"><li>URN Talks</li></a>
-                    <a href="http://uvaurn.org/the-committees/"><li>URN Research Spotlights</li></a>
+                    <a href="spotlights.html"><li>URN Research Spotlights</li></a>
                     <a href="http://uvaurn.org/the-committees/"><li>Research and COVID-19</li></a>
                 </ul>
 
@@ -46,46 +48,42 @@
             <h2>Discover research positions, internships, summer programs, research journals, and grants to support your aspirations.</h1>
         </div>
 
-        <div class="panel_content">
+        <br>
 
-            <div class="column_content">
-                <!--img src="./assets/noun_Research_3121632.svg"-->
-                <div>
-                    <h2>Research Experiences</h2>
-                    <br>
-                    <br>
-                    <h3>Check out lists of open research projects, internships abroad, and a collection of various research-related summer programs.</h3>
-                </div>
-
+        <div class="parent">
+            <div class="child">
+                <h2>Research Experiences</h2>
+                <br><br>
+                <p>Check out lists of open research projects, internships abroad, and a collection of various research-related summer programs.</p>
             </div>
 
-            <div class="column_content">
-                <!--img src = "./assets/covid.png" alt="What we are about" width=100%--> 
-                <div>
-                    <h2>Grants</h2>
-                    <br>
-                    <br>
-                    <h3>See grants offered by UVA’s Office of Undergraduate Research, plus, other undergraduate research awards</h3>
-                </div>
-
+            <div class="child">
+                <h2>Grants</h2>
+                <br><br>
+                <p>See grants offered by UVA’s Office of Undergraduate Research, plus, other undergraduate research awards</p>
             </div>
 
-            <div class="column_content">
-                <!--img src = "./assets/mail.png" alt="What we are about" width=100%--> 
-                <div>
-                    <h2>Publications</h2>
-                    <br>
-                    <br>
-                    <h3>Take a look at some journals calling for submissions from undergraduates, including URN’s very own The Oculus!</h3>
-                </div>
-
+            <div class="child child-pubs">
+                <h2>Publications</h2>
+                <br><br>
+                <p>Take a look at some journals calling for submissions from undergraduates, including URN’s very own <i>The Oculus</i> !</p>
             </div>
-
         </div>
 
-        <div>
-            <br>
-            
+
+        <div id="The Waves" class="header">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
+            preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
         </div>
 
         <div class="footer">

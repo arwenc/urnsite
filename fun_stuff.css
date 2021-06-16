@@ -1,0 +1,113 @@
+.header {
+    position:relative;
+    text-align:center;
+    /*background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);*/
+    background: linear-gradient(60deg, rgb(27, 29, 155) 0%, rgba(255,164,51,1) 100%);
+    color:white;
+  }
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh; /*Viewport Height where 1vh = 1% of the viewport height*/
+    
+    min-height: 100px;
+    max-height: 150px;
+}
+
+/* Animation Stuff */
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transition: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+.glass {
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/bg_narrowed.png');
+    background-size: cover;
+    background-position: center;
+    clip-path: inset(10em);
+    filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-shadow {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-shadow:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 10em;
+    height: calc(100% - 20em);
+    width: calc(100% - 20em);
+    border-top: 2px solid rgba(225, 225, 225, 0.2);
+    border-left: 1px solid rgba(225, 225, 225, 0.1);
+    border-right: 1px solid rgba(225, 225, 225, 0.3);
+    z-index: 2;
+}
+
+.glass-shadow > span {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    font-size: 4em;
+    letter-spacing: 0.75em;
+    padding-left: 0.375em;
+}
+
+@media (max-width: 980px) {
+    .glass {
+        clip-path: inset(5em);
+    }
+    .glass-shadow:before{
+        top:5em;
+        width: calc(100% - 10em);
+    }
+    .glass-shadow > span {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 640px) {
+    .glass-shadow > span {
+        font-size: 2em;
+   }
+}

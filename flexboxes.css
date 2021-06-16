@@ -1,0 +1,52 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+br {
+    display: block;
+    margin: 30px 0;
+}
+
+.parent {
+    display: flex; /* defines an in-line flex container (parent) */
+    height: 500px;
+
+    flex-flow: row;
+    justify-content: center;
+
+    background: white;
+}
+
+.child {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+
+    background: #FFF;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 30px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12),
+        0 1px 2px rgba(0, 0, 0, .24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1); /*defines a Cubic Bezier curve that's defined by 4 points*/
+}
+
+.child:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .22);
+}
+
+.child p {
+    font-size: 25px;
+    text-align: center;
+}
+
+.child h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.child-pubs {
+    background-image: url("/assets/theOculus_heldup.jpg");
+}
